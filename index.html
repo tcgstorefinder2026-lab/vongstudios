@@ -47,12 +47,10 @@
   }
   .game{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
   .game .art{
-    flex:0 0 150px;height:150px;border-radius:12px;border:2px solid var(--gold2);
-    background:radial-gradient(120px 120px at 50% 40%, #7d0f0a, #170707);
-    display:flex;align-items:center;justify-content:center;text-align:center;
-    color:var(--gold-text);font-weight:800;font-size:15px;letter-spacing:1px;
-    line-height:1.35;padding:12px;text-shadow:0 1px 2px #000;
+    flex:0 0 156px;width:156px;height:auto;border-radius:12px;
+    border:2px solid var(--gold2);box-shadow:0 4px 16px rgba(0,0,0,.5);display:block;
   }
+  .game .body{align-self:center}
   .game .body{flex:1;min-width:240px}
   .game h3{font-size:22px;color:#fff;margin-bottom:6px}
   .game p{color:var(--muted);margin-bottom:16px}
@@ -64,6 +62,10 @@
   }
   .badge:hover{color:#2a1600;transform:translateY(-1px)}
   .soon{font-size:13px;color:var(--muted);margin-left:12px}
+  .shots{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+  .shots img{width:106px;height:auto;border-radius:6px;border:1px solid var(--border);
+    box-shadow:0 3px 10px rgba(0,0,0,.45);transition:border-color .15s}
+  .shots img:hover{border-color:var(--gold2)}
 
   .about p{color:var(--muted);max-width:70ch}
 
@@ -85,7 +87,7 @@
     <section>
       <h2>Our Games</h2>
       <div class="card game">
-        <div class="art">TIẾN LÊN<br>GRAND<br>MASTER</div>
+        <img class="art" src="shots/gameplay.png" alt="Tiến Lên: Grand Master gameplay">
         <div class="body">
           <h3>Tiến Lên: Grand Master</h3>
           <p>Climb from backyard games to the Grand World Championship in this offline
@@ -94,6 +96,11 @@
           <!-- Replace href with your Google Play URL once the listing is live. -->
           <a class="badge" href="#">Coming soon to Google Play</a>
           <span class="soon">Android</span>
+          <div class="shots">
+            <img src="shots/world-map.png" alt="World map — a career across six continents">
+            <img src="shots/championship.png" alt="Championship victory">
+            <img src="shots/collection.png" alt="Collection and achievements">
+          </div>
         </div>
       </div>
     </section>

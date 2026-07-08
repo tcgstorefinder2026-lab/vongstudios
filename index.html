@@ -5,61 +5,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vong Studios</title>
 <meta name="description" content="Vong Studios — indie games with pixel-art soul. Makers of Tiến Lên: Grand Master.">
+<link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg1:#0d0a1a; --bg2:#171130; --panel:#1d1638; --panel2:#241a44;
-    --gold:#ffd76b; --gold2:#f2c14e; --maroon:#6d1f2b; --border:#3a2c63;
-    --text:#ece7d8; --muted:#b3a9c9;
+    --red:#e01e10; --red-bright:#ff3a24; --red-dark:#7d0f0a;
+    --gold:#e7c88a; --gold2:#c99a4e; --bronze:#7a5a2e; --gold-text:#f2ddaa;
+    --panel:#160f0e; --panel2:#20130f; --border:#5a2a22;
+    --text:#ece2d4; --muted:#b6a598;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
     font-family:'Inter',system-ui,sans-serif;color:var(--text);line-height:1.65;
-    background:radial-gradient(1200px 600px at 50% -10%, #241a44 0%, var(--bg2) 45%, var(--bg1) 100%);
+    background:#000 radial-gradient(900px 520px at 50% 42%, rgba(224,30,16,.16), rgba(125,15,10,.06) 40%, #000 72%) no-repeat fixed;
     min-height:100vh;-webkit-font-smoothing:antialiased;
   }
   a{color:var(--gold);text-decoration:none}
-  a:hover{color:#fff}
+  a:hover{color:var(--red-bright)}
   .wrap{max-width:960px;margin:0 auto;padding:0 20px}
-  .pixel{font-family:'Press Start 2P',monospace;line-height:1.5;letter-spacing:.5px}
 
-  header{padding:64px 0 40px;text-align:center}
-  .logo{font-size:clamp(22px,5vw,40px);color:var(--gold);
-    text-shadow:0 3px 0 var(--maroon),0 0 24px rgba(255,215,107,.25)}
-  .tagline{margin-top:22px;color:var(--muted);font-size:clamp(15px,2.5vw,18px)}
+  header{padding:40px 0 26px;text-align:center}
+  .logo{width:min(480px,86vw);height:auto;mix-blend-mode:screen;
+    filter:drop-shadow(0 0 24px rgba(224,30,16,.35))}
+  .tagline{margin-top:6px;color:var(--muted);font-size:clamp(15px,2.5vw,18px);
+    letter-spacing:.5px}
 
-  section{padding:34px 0}
-  h2.pixel{font-size:clamp(13px,2.6vw,16px);color:var(--gold2);margin-bottom:20px}
+  section{padding:30px 0}
+  h2{font-size:clamp(15px,2.6vw,20px);color:var(--gold);font-weight:800;
+    text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;
+    text-shadow:0 1px 0 #000}
+  h2::after{content:"";display:block;width:54px;height:3px;margin-top:8px;
+    background:linear-gradient(90deg,var(--red),transparent);border-radius:2px}
 
   .card{
     background:linear-gradient(180deg,var(--panel2),var(--panel));
-    border:2px solid var(--border);border-radius:14px;padding:28px;
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    border:1px solid var(--border);border-radius:14px;padding:28px;
+    box-shadow:0 10px 34px rgba(0,0,0,.55),0 0 0 1px rgba(224,30,16,.06),
+      inset 0 0 40px rgba(224,30,16,.05);
   }
   .game{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
   .game .art{
-    flex:0 0 150px;height:150px;border-radius:12px;border:3px solid var(--gold);
-    background:radial-gradient(120px 120px at 50% 30%, #2a1e52, #120d26);
+    flex:0 0 150px;height:150px;border-radius:12px;border:2px solid var(--gold2);
+    background:radial-gradient(120px 120px at 50% 40%, #7d0f0a, #170707);
     display:flex;align-items:center;justify-content:center;text-align:center;
-    color:var(--gold);font-family:'Press Start 2P',monospace;font-size:11px;padding:12px;
+    color:var(--gold-text);font-weight:800;font-size:15px;letter-spacing:1px;
+    line-height:1.35;padding:12px;text-shadow:0 1px 2px #000;
   }
   .game .body{flex:1;min-width:240px}
   .game h3{font-size:22px;color:#fff;margin-bottom:6px}
   .game p{color:var(--muted);margin-bottom:16px}
   .badge{
-    display:inline-block;padding:12px 20px;border-radius:10px;font-weight:700;
-    background:linear-gradient(180deg,var(--gold),var(--gold2));color:#2a1600;
-    border:2px solid #a87b1e;box-shadow:0 4px 0 #8a5f14;
+    display:inline-block;padding:12px 22px;border-radius:10px;font-weight:800;
+    letter-spacing:.3px;
+    background:linear-gradient(180deg,#f6e6bd,var(--gold2));color:#2a1600;
+    border:1px solid var(--bronze);box-shadow:0 4px 0 #5c4320,0 6px 16px rgba(0,0,0,.5);
   }
   .badge:hover{color:#2a1600;transform:translateY(-1px)}
   .soon{font-size:13px;color:var(--muted);margin-left:12px}
 
   .about p{color:var(--muted);max-width:70ch}
 
-  footer{border-top:1px solid var(--border);margin-top:24px;padding:34px 0 60px;text-align:center;color:var(--muted)}
+  footer{border-top:1px solid var(--border);margin-top:24px;padding:34px 0 60px;
+    text-align:center;color:var(--muted)}
   footer .links{margin-bottom:14px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
   footer small{font-size:13px}
 </style>
@@ -67,16 +77,16 @@
 <body>
   <header>
     <div class="wrap">
-      <div class="logo pixel">VONG&nbsp;STUDIOS</div>
+      <img class="logo" src="logo.png" alt="Vong Studios">
       <p class="tagline">Indie games with pixel-art soul.</p>
     </div>
   </header>
 
   <main class="wrap">
     <section>
-      <h2 class="pixel">Our Games</h2>
+      <h2>Our Games</h2>
       <div class="card game">
-        <div class="art">Tiến Lên<br>GRAND<br>MASTER</div>
+        <div class="art">TIẾN LÊN<br>GRAND<br>MASTER</div>
         <div class="body">
           <h3>Tiến Lên: Grand Master</h3>
           <p>Climb from backyard games to the Grand World Championship in this offline
@@ -90,7 +100,7 @@
     </section>
 
     <section class="about">
-      <h2 class="pixel">About</h2>
+      <h2>About</h2>
       <p>Vong Studios is an independent game studio crafting handmade, pixel-art
          experiences for mobile. We build the kind of games we want to play — deep
          enough to master, and made with care in every screen.</p>

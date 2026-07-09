@@ -27,10 +27,12 @@
   a:hover{color:var(--red-bright)}
   .wrap{max-width:960px;margin:0 auto;padding:0 20px}
 
-  header{padding:40px 0 26px;text-align:center}
-  .logo{width:min(500px,88vw);height:auto;mix-blend-mode:screen}
-  .tagline{margin-top:6px;color:var(--muted);font-size:clamp(15px,2.5vw,18px);
-    letter-spacing:.5px}
+  header{padding:22px 0 4px;text-align:center}
+  .logo{width:min(470px,86vw);height:auto;mix-blend-mode:screen}
+  .tagline{margin-top:0;color:var(--text);font-size:clamp(17px,2.8vw,20px);
+    letter-spacing:.4px;font-weight:600}
+  .tagline .sub{display:block;margin-top:7px;color:var(--muted);
+    font-size:14px;font-weight:400;letter-spacing:.3px}
 
   section{padding:30px 0}
   h2{font-size:clamp(15px,2.6vw,20px);color:var(--gold);font-weight:800;
@@ -67,10 +69,11 @@
   .features li::before{content:"◆";position:absolute;left:0;top:2px;color:var(--red);font-size:12px}
   .cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
   .soon{font-size:13px;color:var(--muted)}
-  .gallery{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:24px}
-  .gthumb{width:150px;height:auto;border-radius:8px;border:1px solid var(--border);
+  .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:24px}
+  .gthumb{width:100%;height:auto;border-radius:8px;border:1px solid var(--border);
     box-shadow:0 4px 14px rgba(0,0,0,.5);cursor:pointer;
     transition:transform .15s,border-color .15s}
+  @media(max-width:640px){.gallery{grid-template-columns:repeat(3,1fr)}}
   .gthumb:hover{transform:translateY(-4px);border-color:var(--gold2)}
   .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;
     align-items:center;justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
@@ -90,7 +93,7 @@
   <header>
     <div class="wrap">
       <img class="logo" src="logo.png" alt="Vong Studios">
-      <p class="tagline">Handcrafted mobile games.</p>
+      <p class="tagline">Handcrafted mobile games.<span class="sub">Makers of Tiến Lên: Grand Master</span></p>
     </div>
   </header>
 

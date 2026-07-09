@@ -5,7 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vong Studios</title>
 <meta name="description" content="Vong Studios — an independent mobile game studio. Makers of Tiến Lên: Grand Master.">
-<link rel="icon" href="logo.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vong Studios">
+<meta property="og:title" content="Vong Studios — Tiến Lên: Grand Master">
+<meta property="og:description" content="An independent mobile game studio. Makers of Tiến Lên: Grand Master — an offline career card game.">
+<meta property="og:url" content="https://vongstudios.com/">
+<meta property="og:image" content="https://vongstudios.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vong Studios — Tiến Lên: Grand Master">
+<meta name="twitter:description" content="Makers of Tiến Lên: Grand Master — an offline career card game.">
+<meta name="twitter:image" content="https://vongstudios.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -74,6 +88,11 @@
     box-shadow:0 4px 14px rgba(0,0,0,.5);cursor:pointer;
     transition:transform .15s,border-color .15s}
   @media(max-width:640px){.gallery{grid-template-columns:repeat(3,1fr)}}
+  .clip{margin:26px 0 6px;text-align:center}
+  .clip img{width:300px;max-width:78vw;height:auto;border-radius:12px;
+    border:2px solid var(--gold2);box-shadow:0 6px 26px rgba(0,0,0,.6)}
+  .clip .cap{display:block;margin-top:10px;color:var(--muted);
+    font-size:12px;letter-spacing:2px;text-transform:uppercase}
   .gthumb:hover{transform:translateY(-4px);border-color:var(--gold2)}
   .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;
     align-items:center;justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
@@ -92,7 +111,7 @@
 <body>
   <header>
     <div class="wrap">
-      <img class="logo" src="logo.png" alt="Vong Studios">
+      <img class="logo" src="logo.webp" width="1200" height="740" alt="Vong Studios">
       <p class="tagline">Handcrafted mobile games.<span class="sub">Makers of Tiến Lên: Grand Master</span></p>
     </div>
   </header>
@@ -101,7 +120,7 @@
     <section>
       <h2>Our Games</h2>
       <div class="card game">
-        <img class="poster" src="shots/keyart.png" alt="Tiến Lên: Grand Master key art">
+        <img class="poster" src="shots/keyart.webp" width="460" height="994" loading="lazy" alt="Tiến Lên: Grand Master key art">
         <div class="body">
           <h3>Tiến Lên: Grand Master</h3>
           <p>Climb from backyard games to the Grand World Championship in this offline
@@ -120,13 +139,17 @@
           </div>
         </div>
       </div>
+      <div class="clip">
+        <img src="shots/gameplay-loop.webp" width="360" height="640" loading="lazy" alt="Tiến Lên: Grand Master — gameplay">
+        <span class="cap">Gameplay</span>
+      </div>
       <div class="gallery">
-        <img class="gthumb" src="shots/menu.png" alt="Main menu">
-        <img class="gthumb" src="shots/gameplay.png" alt="Gameplay — the card table">
-        <img class="gthumb" src="shots/world-map.png" alt="World map — a career across six continents">
-        <img class="gthumb" src="shots/championship.png" alt="Championship victory">
-        <img class="gthumb" src="shots/collection.png" alt="Collection &amp; achievements">
-        <img class="gthumb" src="shots/daily.png" alt="Daily challenge">
+        <img class="gthumb" src="shots/menu.webp" width="500" height="889" loading="lazy" alt="Main menu">
+        <img class="gthumb" src="shots/gameplay.webp" width="500" height="889" loading="lazy" alt="Gameplay — the card table">
+        <img class="gthumb" src="shots/world-map.webp" width="500" height="889" loading="lazy" alt="World map — a career across six continents">
+        <img class="gthumb" src="shots/championship.webp" width="500" height="889" loading="lazy" alt="Championship victory">
+        <img class="gthumb" src="shots/collection.webp" width="500" height="889" loading="lazy" alt="Collection &amp; achievements">
+        <img class="gthumb" src="shots/daily.webp" width="500" height="889" loading="lazy" alt="Daily challenge">
       </div>
     </section>
 

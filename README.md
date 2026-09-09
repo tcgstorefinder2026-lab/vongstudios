@@ -1,14 +1,22 @@
 # Vong Studios website
 
-Static site for **vongstudios.com** — studio homepage + the app privacy policy.
+Static site for **vongstudios.com** — studio homepage + a privacy policy per app.
 No build step; plain HTML/CSS. Deploys unchanged to GitHub Pages, Cloudflare Pages, or Vercel.
 
 - `index.html` — studio homepage
 - `privacy.html` — privacy policy for *Tiến Lên: Grand Master*
+- `privacy-candywars.html` — privacy policy for *Candy Wars* (child-directed; different
+  audience declaration, so it is a separate page rather than a section of the one above)
+- `app-ads.txt` — AdMob publisher verification. One line covers **every** app under
+  publisher `pub-7642464850463096`, so both games are already authorised — but each app's
+  Play listing must point its developer website at `vongstudios.com` for it to be found.
 - `CNAME` — custom domain for GitHub Pages (`vongstudios.com`)
 
 ## Before publishing
 - Set the **Effective date** in `privacy.html` (search `[SET BEFORE PUBLISHING]`).
+- Check the **Effective date** in `privacy-candywars.html` (currently 9 September 2026).
+- Each policy URL must be entered in that app's Play Console listing **and** linked in-app,
+  and must agree with the app's Data safety form.
 - Replace the Google Play `href="#"` in `index.html` once the store listing is live.
 
 ## Deploy on GitHub Pages (with vongstudios.com)
@@ -21,4 +29,5 @@ No build step; plain HTML/CSS. Deploys unchanged to GitHub Pages, Cloudflare Pag
    - `CNAME` for `www` → `<username>.github.io`
 5. Wait for the cert, then tick **Enforce HTTPS**.
 
-Result: `https://vongstudios.com/` (home) and `https://vongstudios.com/privacy.html` (policy).
+Result: `https://vongstudios.com/` (home), `https://vongstudios.com/privacy.html`
+(Tiến Lên policy) and `https://vongstudios.com/privacy-candywars.html` (Candy Wars policy).

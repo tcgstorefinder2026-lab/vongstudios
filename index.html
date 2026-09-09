@@ -42,6 +42,7 @@
   .wrap{max-width:960px;margin:0 auto;padding:0 20px}
 
   header{padding:22px 0 4px;text-align:center}
+  .brand{margin:0;line-height:0}
   .logo{width:min(470px,86vw);height:auto;mix-blend-mode:screen}
   .tagline{margin-top:0;color:var(--text);font-size:clamp(17px,2.8vw,20px);
     letter-spacing:.4px;font-weight:600}
@@ -96,6 +97,8 @@
   .clip .cap{display:block;margin-top:10px;color:var(--muted);
     font-size:12px;letter-spacing:2px;text-transform:uppercase}
   .gthumb:hover{transform:translateY(-4px);border-color:var(--gold2)}
+  .gthumb:focus-visible{outline:3px solid var(--gold);outline-offset:3px;
+    border-color:var(--gold2)}
   .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;
     align-items:center;justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
   .lightbox.on{display:flex}
@@ -113,7 +116,7 @@
 <body>
   <header>
     <div class="wrap">
-      <img class="logo" src="logo.webp" width="1200" height="740" alt="Vong Studios">
+      <h1 class="brand"><img class="logo" src="logo.webp" width="1200" height="740" alt="Vong Studios"></h1>
       <p class="tagline">Handcrafted mobile games.<span class="sub">Makers of Tiến Lên: Grand Master and Candy Wars</span></p>
     </div>
   </header>
@@ -145,12 +148,12 @@
         <span class="cap">Gameplay</span>
       </div>
       <div class="gallery">
-        <img class="gthumb" src="shots/menu.webp" width="500" height="889" loading="lazy" alt="Main menu">
-        <img class="gthumb" src="shots/gameplay.webp" width="500" height="889" loading="lazy" alt="Gameplay — the card table">
-        <img class="gthumb" src="shots/world-map.webp" width="500" height="889" loading="lazy" alt="World map — a career across six continents">
-        <img class="gthumb" src="shots/championship.webp" width="500" height="889" loading="lazy" alt="Championship victory">
-        <img class="gthumb" src="shots/collection.webp" width="500" height="889" loading="lazy" alt="Collection &amp; achievements">
-        <img class="gthumb" src="shots/daily.webp" width="500" height="889" loading="lazy" alt="Daily challenge">
+        <img class="gthumb" tabindex="0" role="button" src="shots/menu.webp" width="500" height="889" loading="lazy" alt="Main menu">
+        <img class="gthumb" tabindex="0" role="button" src="shots/gameplay.webp" width="500" height="889" loading="lazy" alt="Gameplay — the card table">
+        <img class="gthumb" tabindex="0" role="button" src="shots/world-map.webp" width="500" height="889" loading="lazy" alt="World map — a career across six continents">
+        <img class="gthumb" tabindex="0" role="button" src="shots/championship.webp" width="500" height="889" loading="lazy" alt="Championship victory">
+        <img class="gthumb" tabindex="0" role="button" src="shots/collection.webp" width="500" height="889" loading="lazy" alt="Collection &amp; achievements">
+        <img class="gthumb" tabindex="0" role="button" src="shots/daily.webp" width="500" height="889" loading="lazy" alt="Daily challenge">
       </div>
 
       <img class="keyart" src="shots/cw-keyart.webp" width="1200" height="509" loading="lazy" alt="Candy Wars — the Candy Crew key art">
@@ -183,12 +186,12 @@
         <span class="cap">The town</span>
       </div>
       <div class="gallery">
-        <img class="gthumb" src="shots/cw-market.webp" width="500" height="889" loading="lazy" alt="Buying candy at the Park sweet cart">
-        <img class="gthumb" src="shots/cw-crew.webp" width="500" height="889" loading="lazy" alt="The Candy Crew — recruit friends with their own skills">
-        <img class="gthumb" src="shots/cw-selloff.webp" width="500" height="889" loading="lazy" alt="A sell-off against a rival crew">
-        <img class="gthumb" src="shots/cw-coinshop.webp" width="500" height="889" loading="lazy" alt="The Coin Shop — permanent unlocks">
-        <img class="gthumb" src="shots/cw-minigames.webp" width="500" height="889" loading="lazy" alt="Mini Games — the sell-off games on their own">
-        <img class="gthumb" src="shots/cw-schoolstore.webp" width="500" height="889" loading="lazy" alt="The School Store — backpack upgrades and credit">
+        <img class="gthumb" tabindex="0" role="button" src="shots/cw-market.webp" width="500" height="889" loading="lazy" alt="Buying candy at the Park sweet cart">
+        <img class="gthumb" tabindex="0" role="button" src="shots/cw-crew.webp" width="500" height="889" loading="lazy" alt="The Candy Crew — recruit friends with their own skills">
+        <img class="gthumb" tabindex="0" role="button" src="shots/cw-selloff.webp" width="500" height="889" loading="lazy" alt="A sell-off against a rival crew">
+        <img class="gthumb" tabindex="0" role="button" src="shots/cw-coinshop.webp" width="500" height="889" loading="lazy" alt="The Coin Shop — permanent unlocks">
+        <img class="gthumb" tabindex="0" role="button" src="shots/cw-minigames.webp" width="500" height="889" loading="lazy" alt="Mini Games — the sell-off games on their own">
+        <img class="gthumb" tabindex="0" role="button" src="shots/cw-schoolstore.webp" width="500" height="889" loading="lazy" alt="The School Store — backpack upgrades and credit">
       </div>
     </section>
 
@@ -212,14 +215,30 @@
     </div>
   </footer>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true"><img id="lightbox-img" src="" alt=""></div>
+  <div class="lightbox" id="lightbox" aria-hidden="true" tabindex="-1"
+       role="dialog" aria-modal="true" aria-label="Screenshot viewer"><img id="lightbox-img" src="" alt=""></div>
   <script>
     (function(){
-      var lb=document.getElementById('lightbox'), im=document.getElementById('lightbox-img');
+      var lb=document.getElementById('lightbox'), im=document.getElementById('lightbox-img'),
+          opener=null;
+      function open(t){
+        im.src=t.src; im.alt=t.alt;
+        lb.classList.add('on'); lb.setAttribute('aria-hidden','false');
+        opener=t; lb.focus();
+      }
+      function close(){
+        lb.classList.remove('on'); lb.setAttribute('aria-hidden','true');
+        im.src=''; im.alt='';
+        // Send focus back where it came from, or a keyboard user is dropped
+        // at the top of the document every time they close a screenshot.
+        if(opener){opener.focus(); opener=null;}
+      }
       document.querySelectorAll('.gthumb').forEach(function(t){
-        t.addEventListener('click',function(){im.src=t.src;im.alt=t.alt;lb.classList.add('on');});
+        t.addEventListener('click',function(){open(t);});
+        t.addEventListener('keydown',function(e){
+          if(e.key==='Enter'||e.key===' '){e.preventDefault();open(t);}
+        });
       });
-      function close(){lb.classList.remove('on');im.src='';}
       lb.addEventListener('click',close);
       document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
     })();

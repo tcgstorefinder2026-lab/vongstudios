@@ -11,6 +11,7 @@ No build step; plain HTML/CSS. Deploys unchanged to GitHub Pages, Cloudflare Pag
 - `app-ads.txt` — AdMob publisher verification. One line covers **every** app under
   publisher `pub-7642464850463096`, so both games are already authorised — but each app's
   Play listing must point its developer website at `vongstudios.com` for it to be found.
+- `robots.txt` / `sitemap.xml` — crawler hints; add any new page to the sitemap
 - `CNAME` — custom domain for GitHub Pages (`vongstudios.com`)
 
 ## Before publishing

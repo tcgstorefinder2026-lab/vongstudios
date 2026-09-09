@@ -103,6 +103,12 @@
   .gthumb:hover{transform:translateY(-4px);border-color:var(--gold2)}
   .gthumb:focus-visible{outline:3px solid var(--gold);outline-offset:3px;
     border-color:var(--gold2)}
+  /* Candy Wars' UI is high-key pastel, so on a black page these thumbs lose
+     their edges and read as blank cards. A warm frame and a deeper shadow give
+     them back the definition the dark Tiến Lên shots already have. */
+  .gthumb.light{border:2px solid var(--gold2);
+    box-shadow:0 4px 16px rgba(0,0,0,.7),0 0 0 1px rgba(0,0,0,.6)}
+  .gthumb.light:hover,.gthumb.light:focus-visible{border-color:var(--gold)}
   .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;
     align-items:center;justify-content:center;z-index:50;cursor:zoom-out;padding:24px}
   .lightbox.on{display:flex}
@@ -235,12 +241,12 @@
         <span class="cap">Gameplay</span>
       </div>
       <div class="gallery">
-        <img class="gthumb" tabindex="0" role="button" src="shots/cw-market.webp" width="360" height="640" loading="lazy" alt="Buying candy at the Park sweet cart">
-        <img class="gthumb" tabindex="0" role="button" src="shots/cw-crew.webp" width="360" height="640" loading="lazy" alt="The Candy Crew — recruit friends with their own skills">
-        <img class="gthumb" tabindex="0" role="button" src="shots/cw-selloff.webp" width="360" height="640" loading="lazy" alt="A sell-off against a rival crew">
-        <img class="gthumb" tabindex="0" role="button" src="shots/cw-coinshop.webp" width="360" height="640" loading="lazy" alt="The Coin Shop — permanent unlocks">
-        <img class="gthumb" tabindex="0" role="button" src="shots/cw-town.webp" width="360" height="640" loading="lazy" alt="The town map — seven hangouts, each with its own prices">
-        <img class="gthumb" tabindex="0" role="button" src="shots/cw-schoolstore.webp" width="360" height="640" loading="lazy" alt="The School Store — backpack upgrades and credit">
+        <img class="gthumb light" tabindex="0" role="button" src="shots/cw-market.webp" width="360" height="640" loading="lazy" alt="Buying candy at the Park sweet cart">
+        <img class="gthumb light" tabindex="0" role="button" src="shots/cw-crew.webp" width="360" height="640" loading="lazy" alt="The Candy Crew — recruit friends with their own skills">
+        <img class="gthumb light" tabindex="0" role="button" src="shots/cw-selloff.webp" width="360" height="640" loading="lazy" alt="A sell-off against a rival crew">
+        <img class="gthumb light" tabindex="0" role="button" src="shots/cw-coinshop.webp" width="360" height="640" loading="lazy" alt="The Coin Shop — permanent unlocks">
+        <img class="gthumb light" tabindex="0" role="button" src="shots/cw-town.webp" width="360" height="640" loading="lazy" alt="The town map — seven hangouts, each with its own prices">
+        <img class="gthumb light" tabindex="0" role="button" src="shots/cw-schoolstore.webp" width="360" height="640" loading="lazy" alt="The School Store — backpack upgrades and credit">
       </div>
     </section>
 

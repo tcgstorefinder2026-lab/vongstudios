@@ -3,7 +3,8 @@
 Static site for **vongstudios.com** — studio homepage + a privacy policy per app.
 No build step; plain HTML/CSS. Deploys unchanged to GitHub Pages, Cloudflare Pages, or Vercel.
 
-- `index.html` — studio homepage
+- `index.html` — studio homepage (both games)
+- `shots/` — screenshots; the `cw-*.webp` files are Candy Wars
 - `privacy.html` — privacy policy for *Tiến Lên: Grand Master*
 - `privacy-candywars.html` — privacy policy for *Candy Wars* (child-directed; different
   audience declaration, so it is a separate page rather than a section of the one above)
@@ -13,11 +14,12 @@ No build step; plain HTML/CSS. Deploys unchanged to GitHub Pages, Cloudflare Pag
 - `CNAME` — custom domain for GitHub Pages (`vongstudios.com`)
 
 ## Before publishing
-- Set the **Effective date** in `privacy.html` (search `[SET BEFORE PUBLISHING]`).
 - Check the **Effective date** in `privacy-candywars.html` (currently 9 September 2026).
 - Each policy URL must be entered in that app's Play Console listing **and** linked in-app,
   and must agree with the app's Data safety form.
-- Replace the Google Play `href="#"` in `index.html` once the store listing is live.
+- Replace the Candy Wars **“Notify me at launch”** mailto in `index.html` with its Google
+  Play URL once that listing is live. (Tiến Lên already links to
+  `play.google.com/store/apps/details?id=com.thirteenchampionship.game`.)
 
 ## Deploy on GitHub Pages (with vongstudios.com)
 1. Create a public repo (e.g. `vong-studios/vongstudios.com`) and put these files at its **root**.

@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vong Studios</title>
 <meta name="description" content="Vong Studios — an independent mobile game studio. Makers of Tiến Lên: Grand Master and Candy Wars.">
+<link rel="canonical" href="https://vongstudios.com/">
+<meta name="theme-color" content="#160f0e">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -90,8 +92,9 @@
     box-shadow:0 4px 14px rgba(0,0,0,.5);cursor:pointer;
     transition:transform .15s,border-color .15s}
   @media(max-width:640px){.gallery{grid-template-columns:repeat(3,1fr)}}
-  .keyart{width:100%;height:auto;border-radius:12px;border:2px solid var(--gold2);
-    box-shadow:0 6px 24px rgba(0,0,0,.6);display:block;margin:46px 0 22px}
+  .keyart{width:100%;height:auto;border-radius:10px;border:2px solid var(--gold2);
+    box-shadow:0 6px 24px rgba(0,0,0,.6);display:block;margin:0 0 26px}
+  .card + .card{margin-top:46px}
   .clip{margin:26px 0 6px;text-align:center}
   .clip img{width:300px;max-width:78vw;height:auto;border-radius:12px;
     border:2px solid var(--gold2);box-shadow:0 6px 26px rgba(0,0,0,.6)}
@@ -113,6 +116,49 @@
   footer .links{margin-bottom:14px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
   footer small{font-size:13px}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://vongstudios.com/#studio",
+      "name": "Vong Studios",
+      "url": "https://vongstudios.com/",
+      "logo": "https://vongstudios.com/logo.webp",
+      "image": "https://vongstudios.com/og-image.jpg",
+      "email": "vongstudios2026@gmail.com",
+      "description": "An independent mobile game studio building offline games for Android."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://vongstudios.com/#website",
+      "url": "https://vongstudios.com/",
+      "name": "Vong Studios",
+      "publisher": { "@id": "https://vongstudios.com/#studio" }
+    },
+    {
+      "@type": "MobileApplication",
+      "name": "Ti\u1ebfn L\u00ean: Grand Master",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Android",
+      "url": "https://play.google.com/store/apps/details?id=com.thirteenchampionship.game",
+      "image": "https://vongstudios.com/shots/keyart.webp",
+      "description": "An offline career card game based on Ti\u1ebfn l\u00ean (Thirteen), with LAN Versus multiplayer.",
+      "publisher": { "@id": "https://vongstudios.com/#studio" }
+    },
+    {
+      "@type": "MobileApplication",
+      "name": "Candy Wars",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Android",
+      "image": "https://vongstudios.com/shots/cw-keyart.webp",
+      "description": "A candy-trading game for kids: buy low, sell high and build the best candy empire in town in thirty days. Plays offline.",
+      "publisher": { "@id": "https://vongstudios.com/#studio" }
+    }
+  ]
+}
+</script>
 </head>
 <body>
   <header>
@@ -157,8 +203,9 @@
         <img class="gthumb" tabindex="0" role="button" src="shots/daily.webp" width="500" height="889" loading="lazy" alt="Daily challenge">
       </div>
 
+      <div class="card">
       <img class="keyart" src="shots/cw-keyart.webp" width="1200" height="509" loading="lazy" alt="Candy Wars — the Candy Crew key art">
-      <div class="card game">
+      <div class="game">
         <img class="poster" src="shots/cw-poster.webp" width="500" height="889" loading="lazy" alt="Candy Wars title screen">
         <div class="body">
           <h3>Candy Wars</h3>
@@ -182,17 +229,18 @@
           </div>
         </div>
       </div>
+      </div>
       <div class="clip">
-        <img src="shots/cw-map.webp" width="360" height="640" loading="lazy" alt="Candy Wars — the town map">
-        <span class="cap">The town</span>
+        <img src="shots/cw-loop.webp" width="360" height="640" loading="lazy" alt="Candy Wars — gameplay: the town map, buying candy, the crew, a sell-off and its payoff">
+        <span class="cap">Gameplay</span>
       </div>
       <div class="gallery">
-        <img class="gthumb" tabindex="0" role="button" src="shots/cw-market.webp" width="500" height="889" loading="lazy" alt="Buying candy at the Park sweet cart">
-        <img class="gthumb" tabindex="0" role="button" src="shots/cw-crew.webp" width="500" height="889" loading="lazy" alt="The Candy Crew — recruit friends with their own skills">
-        <img class="gthumb" tabindex="0" role="button" src="shots/cw-selloff.webp" width="500" height="889" loading="lazy" alt="A sell-off against a rival crew">
-        <img class="gthumb" tabindex="0" role="button" src="shots/cw-coinshop.webp" width="500" height="889" loading="lazy" alt="The Coin Shop — permanent unlocks">
-        <img class="gthumb" tabindex="0" role="button" src="shots/cw-minigames.webp" width="500" height="889" loading="lazy" alt="Mini Games — the sell-off games on their own">
-        <img class="gthumb" tabindex="0" role="button" src="shots/cw-schoolstore.webp" width="500" height="889" loading="lazy" alt="The School Store — backpack upgrades and credit">
+        <img class="gthumb" tabindex="0" role="button" src="shots/cw-market.webp" width="360" height="640" loading="lazy" alt="Buying candy at the Park sweet cart">
+        <img class="gthumb" tabindex="0" role="button" src="shots/cw-crew.webp" width="360" height="640" loading="lazy" alt="The Candy Crew — recruit friends with their own skills">
+        <img class="gthumb" tabindex="0" role="button" src="shots/cw-selloff.webp" width="360" height="640" loading="lazy" alt="A sell-off against a rival crew">
+        <img class="gthumb" tabindex="0" role="button" src="shots/cw-coinshop.webp" width="360" height="640" loading="lazy" alt="The Coin Shop — permanent unlocks">
+        <img class="gthumb" tabindex="0" role="button" src="shots/cw-town.webp" width="360" height="640" loading="lazy" alt="The town map — seven hangouts, each with its own prices">
+        <img class="gthumb" tabindex="0" role="button" src="shots/cw-schoolstore.webp" width="360" height="640" loading="lazy" alt="The School Store — backpack upgrades and credit">
       </div>
     </section>
 

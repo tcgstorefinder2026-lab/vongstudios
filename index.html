@@ -44,13 +44,13 @@
   a:hover{color:var(--red-bright)}
   .wrap{max-width:960px;margin:0 auto;padding:0 20px}
 
-  header{padding:22px 0 4px;text-align:center}
+  header{padding:14px 0 2px;text-align:center}
   .brand{margin:0;line-height:0}
-  .logo{width:min(470px,86vw);height:auto;mix-blend-mode:screen}
-  .tagline{margin-top:0;color:var(--text);font-size:clamp(17px,2.8vw,20px);
-    letter-spacing:.4px;font-weight:600}
-  .tagline .sub{display:block;margin-top:7px;color:var(--muted);
-    font-size:14px;font-weight:400;letter-spacing:.3px}
+  .logo{width:min(410px,80vw);height:auto;mix-blend-mode:screen}
+  .tagline{margin-top:0;color:var(--text);font-size:clamp(20px,3.4vw,27px);
+    letter-spacing:.2px;font-weight:700}
+  .tagline .sub{display:block;margin-top:9px;color:var(--muted);
+    font-size:15px;font-weight:400;letter-spacing:.3px}
 
   section{padding:30px 0}
   h2{font-size:clamp(15px,2.6vw,20px);color:var(--gold);font-weight:800;
@@ -88,6 +88,14 @@
   .cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
   .soon{font-size:13px;color:var(--muted)}
   .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:24px}
+  .showcase{display:flex;gap:22px;align-items:center;margin-top:26px}
+  .showcase .clip{margin:0;flex:0 0 300px}
+  .showcase .gallery{flex:1;min-width:0;margin-top:0;grid-template-columns:repeat(3,1fr)}
+  @media(max-width:760px){
+    .showcase{flex-direction:column;align-items:center;gap:18px}
+    .showcase .clip{flex:none}
+    .showcase .gallery{width:100%}
+  }
   .gthumb{width:100%;height:auto;border-radius:8px;border:1px solid var(--border);
     box-shadow:0 4px 14px rgba(0,0,0,.5);cursor:pointer;
     transition:transform .15s,border-color .15s}
@@ -169,7 +177,7 @@
 <body>
   <header>
     <div class="wrap">
-      <h1 class="brand"><img class="logo" src="logo.webp" width="1200" height="740" alt="Vong Studios"></h1>
+      <h1 class="brand"><img class="logo" src="logo.webp" width="1663" height="1224" alt="Vong Studios"></h1>
       <p class="tagline">Handcrafted mobile games.<span class="sub">Makers of Tiến Lên: Grand Master and Candy Wars</span></p>
     </div>
   </header>
@@ -196,17 +204,19 @@
           </div>
         </div>
       </div>
-      <div class="clip">
-        <img src="shots/gameplay-loop.webp" width="360" height="640" loading="lazy" alt="Tiến Lên: Grand Master — gameplay">
-        <span class="cap">Gameplay</span>
-      </div>
-      <div class="gallery">
-        <img class="gthumb" tabindex="0" role="button" src="shots/menu.webp" width="500" height="889" loading="lazy" alt="Main menu">
-        <img class="gthumb" tabindex="0" role="button" src="shots/gameplay.webp" width="500" height="889" loading="lazy" alt="Gameplay — the card table">
-        <img class="gthumb" tabindex="0" role="button" src="shots/world-map.webp" width="500" height="889" loading="lazy" alt="World map — a career across six continents">
-        <img class="gthumb" tabindex="0" role="button" src="shots/championship.webp" width="500" height="889" loading="lazy" alt="Championship victory">
-        <img class="gthumb" tabindex="0" role="button" src="shots/collection.webp" width="500" height="889" loading="lazy" alt="Collection &amp; achievements">
-        <img class="gthumb" tabindex="0" role="button" src="shots/daily.webp" width="500" height="889" loading="lazy" alt="Daily challenge">
+      <div class="showcase">
+        <div class="clip">
+          <img src="shots/gameplay-loop.webp" width="360" height="640" loading="lazy" alt="Tiến Lên: Grand Master — gameplay">
+          <span class="cap">Gameplay</span>
+        </div>
+        <div class="gallery">
+          <img class="gthumb" tabindex="0" role="button" src="shots/menu.webp" width="500" height="889" loading="lazy" alt="Main menu">
+          <img class="gthumb" tabindex="0" role="button" src="shots/gameplay.webp" width="500" height="889" loading="lazy" alt="Gameplay — the card table">
+          <img class="gthumb" tabindex="0" role="button" src="shots/world-map.webp" width="500" height="889" loading="lazy" alt="World map — a career across six continents">
+          <img class="gthumb" tabindex="0" role="button" src="shots/championship.webp" width="500" height="889" loading="lazy" alt="Championship victory">
+          <img class="gthumb" tabindex="0" role="button" src="shots/collection.webp" width="500" height="889" loading="lazy" alt="Collection &amp; achievements">
+          <img class="gthumb" tabindex="0" role="button" src="shots/daily.webp" width="500" height="889" loading="lazy" alt="Daily challenge">
+        </div>
       </div>
 
       <div class="card">
@@ -236,17 +246,19 @@
         </div>
       </div>
       </div>
-      <div class="clip">
-        <img src="shots/cw-loop.webp" width="360" height="640" loading="lazy" alt="Candy Wars — gameplay: the town map, buying candy, the crew, a sell-off and its payoff">
-        <span class="cap">Gameplay</span>
-      </div>
-      <div class="gallery">
-        <img class="gthumb light" tabindex="0" role="button" src="shots/cw-market.webp" width="360" height="640" loading="lazy" alt="Buying candy at the Park sweet cart">
-        <img class="gthumb light" tabindex="0" role="button" src="shots/cw-crew.webp" width="360" height="640" loading="lazy" alt="The Candy Crew — Daisy, Teddy and Isaiah of the Sugar Squad, each with their own role">
-        <img class="gthumb light" tabindex="0" role="button" src="shots/cw-selloff.webp" width="360" height="640" loading="lazy" alt="A sell-off against a rival crew">
-        <img class="gthumb light" tabindex="0" role="button" src="shots/cw-coinshop.webp" width="360" height="640" loading="lazy" alt="The Coin Shop — permanent unlocks">
-        <img class="gthumb light" tabindex="0" role="button" src="shots/cw-town.webp" width="360" height="640" loading="lazy" alt="The town map — seven hangouts, each with its own prices">
-        <img class="gthumb light" tabindex="0" role="button" src="shots/cw-schoolstore.webp" width="360" height="640" loading="lazy" alt="The School Store — backpack upgrades and credit">
+      <div class="showcase">
+        <div class="clip">
+          <img src="shots/cw-loop.webp" width="360" height="640" loading="lazy" alt="Candy Wars — gameplay: the town map, buying candy, the crew, a sell-off and its payoff">
+          <span class="cap">Gameplay</span>
+        </div>
+        <div class="gallery">
+          <img class="gthumb light" tabindex="0" role="button" src="shots/cw-market.webp" width="360" height="640" loading="lazy" alt="Buying candy at the Park sweet cart">
+          <img class="gthumb light" tabindex="0" role="button" src="shots/cw-crew.webp" width="360" height="640" loading="lazy" alt="The Candy Crew — Daisy, Teddy and Isaiah of the Sugar Squad, each with their own role">
+          <img class="gthumb light" tabindex="0" role="button" src="shots/cw-selloff.webp" width="360" height="640" loading="lazy" alt="A sell-off against a rival crew">
+          <img class="gthumb light" tabindex="0" role="button" src="shots/cw-coinshop.webp" width="360" height="640" loading="lazy" alt="The Coin Shop — permanent unlocks">
+          <img class="gthumb light" tabindex="0" role="button" src="shots/cw-town.webp" width="360" height="640" loading="lazy" alt="The town map — seven hangouts, each with its own prices">
+          <img class="gthumb light" tabindex="0" role="button" src="shots/cw-schoolstore.webp" width="360" height="640" loading="lazy" alt="The School Store — backpack upgrades and credit">
+        </div>
       </div>
     </section>
 

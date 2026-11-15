@@ -1,10 +1,12 @@
 # Vong Studios website
 
 Static site for **vongstudios.com** — studio homepage + a privacy policy per app.
-No build step; plain HTML/CSS. Deploys unchanged to GitHub Pages, Cloudflare Pages, or Vercel.
+No build step; plain HTML/CSS. Every page shares `site.css`. Deploys unchanged to GitHub Pages, Cloudflare Pages, or Vercel.
 
-- `index.html` — studio homepage (both games)
-- `shots/` — screenshots; the `cw-*.webp` files are Candy Wars
+- `index.html` — studio homepage (all three games, a For parents section, about and contact)
+- `site.css` — the shared look: night sky, Fredoka headings, one accent colour per game
+- `logo-nav.webp` — the logo cropped tight for the navigation bar
+- `shots/` — screenshots; `cw-*.webp` are Candy Wars, `cc-*.webp` are Coin & Capsule
 - `privacy.html` — privacy policy for *Tiến Lên: Grand Master*
 - `privacy-candywars.html` — privacy policy for *Candy Wars* (child-directed; different
   audience declaration, so it is a separate page rather than a section of the one above)

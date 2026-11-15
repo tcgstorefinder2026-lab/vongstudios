@@ -8,6 +8,8 @@ No build step; plain HTML/CSS. Deploys unchanged to GitHub Pages, Cloudflare Pag
 - `privacy.html` — privacy policy for *Tiến Lên: Grand Master*
 - `privacy-candywars.html` — privacy policy for *Candy Wars* (child-directed; different
   audience declaration, so it is a separate page rather than a section of the one above)
+- `privacy-coincapsule.html` — privacy policy for *Coin & Capsule: Year 2 Maths*
+  (child-directed, no ads; its own page for the same reason)
 - `app-ads.txt` — AdMob publisher verification. One line covers **every** app under
   publisher `pub-7642464850463096`, so both games are already authorised — but each app's
   Play listing must point its developer website at `vongstudios.com` for it to be found.

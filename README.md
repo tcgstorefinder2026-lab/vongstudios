@@ -8,6 +8,8 @@ No build step; plain HTML/CSS. Every page shares `site.css`. Deploys unchanged t
 - `logo-nav.webp` — the logo cropped tight for the navigation bar
 - `shots/` — screenshots; `cw-*.webp` are Candy Wars, `cc-*.webp` are Coin & Capsule
 - `privacy.html` — privacy policy for *Tiến Lên: Grand Master*
+- `terms.html` — Terms of Service for *Tiến Lên: Grand Master* (the URL given in Play Console
+  → App content → trader status)
 - `privacy-candywars.html` — privacy policy for *Candy Wars* (child-directed; different
   audience declaration, so it is a separate page rather than a section of the one above)
 - `privacy-coincapsule.html` — privacy policy for *Coin & Capsule: Year 2 Maths*
